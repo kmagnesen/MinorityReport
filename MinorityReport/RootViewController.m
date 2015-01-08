@@ -6,14 +6,15 @@
 //  Copyright (c) 2015 MobileMakers. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 
-@interface ViewController ()
+@interface RootViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *theFutureLabel;
+@property (strong, nonatomic) IBOutlet UILabel *thePrecogsLabel;
 
 @end
 
-@implementation ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,7 +26,14 @@
     
     CGPoint point = [sender locationInView:self.view];
     self.theFutureLabel.center = point;
-    NSLog(@"%f %f", point.x, point.y);
+//    NSLog(@"%f %f", point.x, point.y);
+
+    if (CGRectContainsPoint(self.thePrecogsLabel.frame, point)) {
+
+        self.theFutureLabel.text = @"A Ficticious and Incriminating Future";
+
+        [self.theFutureLabel sizeToFit];
+    }
 }
 
 @end
