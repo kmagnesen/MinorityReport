@@ -33,15 +33,18 @@
     if (CGRectContainsPoint(self.thePrecogsLabel.frame, point)) {
 
         self.theFutureLabel.text = @"A Ficticious and Incriminating Future";
-
         [self.theFutureLabel sizeToFit];
     }
 
     if (sender.state == UIGestureRecognizerStateEnded) {
         [UIView animateWithDuration:1.0f animations:^{
             self.theFutureLabel.center = self.originalCenter;
+        } completion:^(BOOL finished) {
+
+            self.theFutureLabel.backgroundColor = [UIColor yellowColor];
         }];
     }
+
 }
 
 @end
