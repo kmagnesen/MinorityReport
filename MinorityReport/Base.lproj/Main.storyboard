@@ -23,12 +23,13 @@
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nRE-PM-ckz" appends="YES" id="RKm-Fw-T7e"/>
-                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1nb-HP-z2i" appends="YES" id="tYd-OS-QzI"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Minority Report Control Report" id="wFG-yY-9tF"/>
                     <connections>
@@ -36,9 +37,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="nRE-PM-ckz">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="1nb-HP-z2i">
                     <connections>
-                        <action selector="onDrag:" destination="vXZ-lx-hvc" id="ikt-DH-j0p"/>
+                        <action selector="onDrag:" destination="vXZ-lx-hvc" id="ATP-Wo-U2J"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
